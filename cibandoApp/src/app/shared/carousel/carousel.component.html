@@ -1,11 +1,15 @@
-<ngb-carousel *ngIf="images">
-	<ng-template ngbSlide *ngFor="let immagine of images">
+<ngb-carousel *ngIf="images.length > 1; else noSlide" [interval]=3000>
+	<ng-template ngbSlide *ngFor="let immagine of images; let i = index">  <!-- mette l'indice nella variabile i -->
 		<div class="picsum-img-wrapper">
 			<img [src]="percorso + immagine.id + '.jpg'" alt="Random first slide" />
 		</div>
 		<div class="carousel-caption">
-			<h3>{{ immagine.titolo }}</h3>
+			<h3>{{ immagine.titolo }} Immagine numero {{i + 1}}</h3>
 		</div>
 	</ng-template>
 
 </ngb-carousel>
+
+<ng-template #noSlide>
+    <img src="../../../assets/images/carousel-1.jpg" class="no-slide">
+</ng-template>
