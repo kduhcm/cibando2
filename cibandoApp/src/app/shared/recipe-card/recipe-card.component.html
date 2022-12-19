@@ -1,0 +1,11 @@
+<div class="container-cards">
+    <div class="card" *ngFor="let recipe of recipes">
+        <!-- <div class="card-image" style="background-image: url('../../../assets/images/carousel-1.jpg');"></div> -->
+        <div class="card-image" [ngStyle]="{'background-image' : 'url(' + recipe.image + ')' }"></div>
+        <div class="card-body">
+          <h5 class="card-title">{{recipe.title}}</h5>
+          <p class="card-text">{{recipe.description}}</p>
+          <a href="#" class="btn btn-primary">Dettaglio</a>
+        </div>
+    </div>
+</div>

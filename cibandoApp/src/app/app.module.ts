@@ -6,12 +6,18 @@ import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { CarouselComponent } from './shared/carousel/carousel.component';
 import { RecipesComponent } from './components/recipes/recipes.component';
+import { HeaderComponent } from './shared/header/header.component';
+import { HomeComponent } from './components/home/home.component';
+import { RecipeCardComponent } from './shared/recipe-card/recipe-card.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CarouselComponent,
-    RecipesComponent
+    RecipesComponent,
+    HeaderComponent,
+    HomeComponent,
+    RecipeCardComponent
   ],
   imports: [
     BrowserModule,
