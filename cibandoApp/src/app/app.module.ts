@@ -3,9 +3,11 @@ import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { PasswordModule } from 'primeng/password';
+import { DividerModule } from "primeng/divider";
 
 import { AppComponent } from './app.component';
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { CarouselComponent } from './shared/carousel/carousel.component';
 import { RecipesComponent } from './components/recipes/recipes.component';
 import { HeaderComponent } from './shared/header/header.component';
@@ -35,6 +37,8 @@ import { RegistrationComponent } from './components/user/registration/registrati
     BrowserAnimationsModule,
     NgbModule,
     FormsModule,
+    PasswordModule,
+    DividerModule,
     ReactiveFormsModule
   ],
   providers: [],
