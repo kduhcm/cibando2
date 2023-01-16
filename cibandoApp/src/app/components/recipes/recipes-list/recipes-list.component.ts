@@ -11,6 +11,8 @@ export class RecipesListComponent implements OnInit{
 
   ricette: Recipe[];
 
+  messaggioRicevuto: string;
+
   // viene eseguito prima dell'onInit. Ci vanno i servizi
 constructor(private rs: RecipeService){
   //console.log('questo è il costruttore');
@@ -29,6 +31,19 @@ ngOnInit(): void {
     }
   }); // mi sottoscrivo al metodo osservabile
 
+
+  }
+
+  riceviMsg(e: any) {
+    //console.log(e);
+    if(e === this.messaggioRicevuto)
+    {
+      // toggle
+      this.messaggioRicevuto='';
+    }
+    else {
+      this.messaggioRicevuto=e;
+    }
 
   }
 }

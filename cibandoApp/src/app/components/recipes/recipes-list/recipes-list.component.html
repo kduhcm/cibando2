@@ -1,2 +1,3 @@
-<H2 class="titolo">Ecco le nostre ricette</H2>
-<app-recipe-card [recipes]="ricette"></app-recipe-card>
+<h2 class="titolo">Ecco le nostre ricette</h2>
+<h3 *ngIf="messaggioRicevuto" class="messaggio-ricevuto">{{messaggioRicevuto}}</h3>
+<app-recipe-card [recipes]="ricette" (messaggio)="riceviMsg($event)"></app-recipe-card>

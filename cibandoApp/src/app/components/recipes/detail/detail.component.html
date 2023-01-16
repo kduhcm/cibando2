@@ -1,13 +1,23 @@
-<div class="container-image" [ngStyle]="{'background-image':'url(' + ricetta.image +')'}"></div>
-<div class="container-fluid">
-  <div class="row"></div>
-  <h2 class="title-summary">{{ricetta.title}}</h2>
-  <div class="col-auto">{{ricetta.description}}</div>
-  <div class="row">
-    Difficoltà <img src="{{percorsoStelline}}{{ricetta.difficulty}}.png" class="stelline">
-    <!-- Difficoltà <img [src]="percorsoStelline + ricetta.difficulty + '.png'" class="stelline"> -->
+<div *ngIf="ricetta">
+  <div class="container-image" [ngStyle]="{'background-image':'url(' + ricetta.image +')'}"></div>
+  <div class="container-fluid">
+    <div class="row"></div>
+    <h2 class="title-summary">{{ricetta.title}}</h2>
+    <div class="col-auto">{{ricetta.description}}</div>
+    <div class="row">
+      <div class="col-auto">
+        <strong>Difficoltà</strong> <img src="{{percorsoStelline}}{{ricetta.difficulty}}.png" class="stelline">
+        <!-- Difficoltà <img [src]="percorsoStelline + ricetta.difficulty + '.png'" class="stelline"> -->
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-data">
+        Ricetta pubblicata il {{ricetta.date}}
+      </div>
+    </div>
   </div>
-  <div class="row">
-    Ricetta pubblicata il {{ricetta.date}}
-  </div>
+</div>
+
+<div *ngIf="!ricetta">
+  <h3>Spiacenti la ricetta non esiste</h3>
 </div>

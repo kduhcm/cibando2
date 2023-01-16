@@ -1,0 +1,25 @@
+.img-bg{
+background-image: url('https://static.vecteezy.com/ti/foto-gratuito/p2/711277-italiano-food-pizzeria-con-salumi-e-pomodori-verticali-foto.jpg');
+width: 45%;
+margin-left:auto;
+height: auto;
+background-size: cover;
+}
+
+.btn-primary {
+background: #8e210b!important;
+}
+
+input.ng-invalid.ng-touched{
+  border: 1px solid red;
+}
+
+input.ng-valid.ng-touched{
+  border: 1px solid green;
+}
+
+.is-danger {
+  font-size: 11px;
+  color: red;
+  font:9px;
+}
