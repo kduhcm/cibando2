@@ -1,5 +1,9 @@
 <div class="container-cards">
-    <div class="card" *ngFor="let recipe of recipes">
+    <div class="paginatore" *ngIf="pag != 'home'">
+      <h3>{{ricettePerPagina}}</h3>
+      <p-paginator [rows]="ricettePerPagina" [totalRecords]="recipes.length" (onPageChange)="paginate($event)" (rowsPerPageOptionsChange)="ricettePerPagina"></p-paginator>
+    </div>
+    <div class="card" *ngFor="let recipe of recipes | slice: (page * ricettePerPagina) - ricettePerPagina : page * ricettePerPagina">
         <!-- <div class="card-image" style="background-image: url('../../../assets/images/carousel-1.jpg');"></div> -->
         <div class="card-image" [ngStyle]="{'background-image' : 'url(' + recipe.image + ')' }" (click)="inviaMessaggio(recipe.title)"></div>
         <div class="card-body">

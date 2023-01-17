@@ -28,6 +28,10 @@ export class HomeComponent implements OnInit{
     {
         localStorage.setItem('nome', res.nome);
         localStorage.setItem('email', res.email);
+
+        // Se  richiamo con replySubject posso evitare le localStorage perche fa un ping continuo
+        // this.nome = localStorage.getItem('nome');
+        // this.email = localStorage.getItem('email');
     }
     );
 
